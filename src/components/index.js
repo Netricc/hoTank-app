@@ -5,5 +5,15 @@ import Features from "./Features";
 import Footer from "./Footer";
 import Review from "./Review";
 import Contact from "./Contact";
+import Loader from "./Loader";
 
-export { Navbar, Hero, CompnayNumbers, Features, Footer, Review, Contact };
+export {
+  Navbar,
+  Hero,
+  CompnayNumbers,
+  Features,
+  Footer,
+  Review,
+  Contact,
+  Loader,
+};

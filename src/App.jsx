@@ -1,11 +1,25 @@
-import { Navbar, Hero, CompnayNumbers } from "./components/";
-
+import { Navbar, Hero, CompnayNumbers, Features, Loader } from "./components/";
+import { useState, useEffect } from "react";
 const App = () => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    window.onload = () => {
+      setLoading(true);
+    };
+  }, []);
+
   return (
     <>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <CompnayNumbers />
+      {loading ? (
+        <>
+          <Navbar></Navbar>
+          <Hero></Hero>
+          <CompnayNumbers></CompnayNumbers>
+          <Features></Features>
+        </>
+      ) : (
+        <Loader></Loader>
+      )}
     </>
   );
 };
