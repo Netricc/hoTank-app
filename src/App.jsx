@@ -1,7 +1,14 @@
-import { Navbar, Hero, CompnayNumbers, Features, Loader } from "./components/";
+import {
+  Navbar,
+  Hero,
+  CompnayNumbers,
+  Features,
+  Loader,
+  Review,
+} from "./components/";
 import { useState, useEffect } from "react";
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     window.onload = () => {
       setLoading(true);
@@ -16,6 +23,7 @@ const App = () => {
           <Hero></Hero>
           <CompnayNumbers></CompnayNumbers>
           <Features></Features>
+          <Review></Review>
         </>
       ) : (
         <Loader></Loader>
