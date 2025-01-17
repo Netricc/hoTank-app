@@ -9,7 +9,7 @@ import {
 } from "./components/";
 import { useState, useEffect } from "react";
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     window.onload = () => {
       setLoading(true);
