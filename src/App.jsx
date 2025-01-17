@@ -5,10 +5,11 @@ import {
   Features,
   Loader,
   Review,
+  Contact,
 } from "./components/";
 import { useState, useEffect } from "react";
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     window.onload = () => {
       setLoading(true);
@@ -24,6 +25,7 @@ const App = () => {
           <CompnayNumbers></CompnayNumbers>
           <Features></Features>
           <Review></Review>
+          <Contact />
         </>
       ) : (
         <Loader></Loader>

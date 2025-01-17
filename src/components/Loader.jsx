@@ -14,7 +14,7 @@ const Loader = () => {
         <div className="bar10"></div>
         <div className="bar11"></div>
         <div className="bar12"></div>
-      </div>{" "}
+      </div>
     </section>
   );
 };
