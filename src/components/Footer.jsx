@@ -39,10 +39,10 @@ const Footer = () => {
       </div>
 
       <div className="py-[30px]  border-t-2 border-slate-600 w-full flex items-center justify-between max-md:flex-col max-md:gap-6 max-md:justify-normal">
-        <p className="text-slate-300 text-[18px]">
+        <p className="text-slate-300 text-[18px] max-sm:text-center">
           <span className="font-bold">ⓒ</span>
 
-          <span className="ml-[22px] font-normal text-slate-300">
+          <span className="ml-[22px] font-normal text-slate-300 ">
             2021 HoTank. All Rights Reserved.
           </span>
         </p>
