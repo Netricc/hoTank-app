@@ -54,8 +54,8 @@ const Review = () => {
 
           <div className="w-full mt-[40px] flex flex-col gap-12">
             <p className="w-full text-[18px] max-sm:text-[16px] text-white">
-              Money makes your life easier. If you're lucky to have it, you're
-              lucky.
+              Money makes your life easier. If you&apos;re lucky to have it,
+              you&apos;re lucky.
             </p>
 
             <div className="flex items-center">

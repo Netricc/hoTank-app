@@ -6,6 +6,7 @@ import {
   Loader,
   Review,
   Contact,
+  Footer,
 } from "./components/";
 import { useState, useEffect } from "react";
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Features></Features>
           <Review></Review>
           <Contact />
+          <Footer />
         </>
       ) : (
         <Loader></Loader>

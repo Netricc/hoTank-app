@@ -19,3 +19,33 @@ export const CompanyNumbersData = [
     label: "TRANSACTION",
   },
 ];
+
+export const FooterLinks = [
+  {
+    title: "Usefull Links",
+    links: [
+      { label: "Content", href: "#content" },
+      { label: "How it Works", href: "#howitworks" },
+      { label: "Create", href: "#create" },
+      { label: "Explore", href: "#explore" },
+      { label: "Terms & Services", href: "#termsservices" },
+    ],
+  },
+  {
+    title: "Community",
+    links: [
+      { label: "Help Center", href: "#helpcenter" },
+      { label: "Partners", href: "#partners" },
+      { label: "Suggestions", href: "#suggestions" },
+      { label: "Blog", href: "#blog" },
+      { label: "Newsletters", href: "#newsletters" },
+    ],
+  },
+  {
+    title: "Partner",
+    links: [
+      { label: "Our partner", href: "#ourpartner" },
+      { label: "Become a Partner", href: "#becomeapartner" },
+    ],
+  },
+];
