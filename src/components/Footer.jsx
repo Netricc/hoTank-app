@@ -6,7 +6,7 @@ import facebookIcon from "./../assets/icons/facebook.png";
 import linkdnIcon from "./../assets/icons/linkdn.png";
 const Footer = () => {
   return (
-    <section className="w-full bg-[#06080D] container-max pt-[72px] flex flex-col gap-[40px] max-xl:bg-red-500 max-md:bg-green-400 max-sm:bg-violet-600">
+    <section className="w-full bg-[#06080D] container-max pt-[72px] flex flex-col gap-[40px]">
       <div className="w-full flex items-start justify-between max-xl:flex-col max-xl:ustify-normal max-xl:gap-9">
         <div>
           <a href="/" className="">
