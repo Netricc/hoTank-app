@@ -2,11 +2,42 @@ import quote from "./../assets/icons/quote.svg";
 import reviewImage1 from "./../assets/images/reviewImage1.png";
 import reviewImage2 from "./../assets/images/reviewImage2.png";
 import reviewImage3 from "./../assets/images/reviewImage3.png";
+import { useEffect } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger"; // Ensure correct import
+import gsap from "gsap";
+
 const Review = () => {
+  useEffect(() => {
+    // Ensure ScrollTrigger is registered
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animation for the review title
+    gsap.fromTo(
+      "#review-title", // Correct ID selector
+      {
+        y: "100%",
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: "#review-title", // Correct ID
+          start: "top 80%", // When the top of the trigger hits 80% of the viewport
+          end: "top 50%", // Optional end point
+          toggleActions: "play none none none", // Play animation on enter
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="w-full  bg-bgPrimary container-max pb-[50px]">
+    <section className="w-full bg-bgPrimary container-max pb-[50px]">
       <div className="w-full flex items-center mb-[80px] max-xl:flex-col max-xl:gap-6 max-xl:items-start">
-        <h2 className="text-white text-[48px] font-semibold">
+        {/* Corrected ID */}
+        <h2 id="review-title" className="text-white text-[48px] font-semibold">
           What people are <br /> saying about us
         </h2>
         <p className="text-slate-300 text-[18px] ml-[120px] max-xl:ml-0">
@@ -15,8 +46,8 @@ const Review = () => {
         </p>
       </div>
 
-      <div className="w-full flex items-center justify-between max-2xl:justify-center flex-wrap ">
-        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4 max-sm:mx-0  bg-secondary-gradient py-[60px] px-[40px] rounded-[20px]">
+      <div className="w-full flex items-center justify-between max-2xl:justify-center flex-wrap">
+        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4 max-sm:mx-0 bg-secondary-gradient py-[60px] px-[40px] rounded-[20px]">
           <span>
             <img src={quote} alt="quote icon" />
           </span>
@@ -47,7 +78,7 @@ const Review = () => {
             </div>
           </div>
         </article>
-        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4   py-[60px] px-[40px] rounded-[20px]">
+        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4 py-[60px] px-[40px] rounded-[20px]">
           <span>
             <img src={quote} alt="quote icon" />
           </span>
@@ -68,7 +99,7 @@ const Review = () => {
                 />
               </div>
               <div className="ml-[16px]">
-                <h4 className="text-[20px]  max-sm:text-[18px] text-white">
+                <h4 className="text-[20px] max-sm:text-[18px] text-white">
                   Steve Mark
                 </h4>
                 <span className="text-[16px] text-slate-300">Leader</span>
@@ -76,13 +107,13 @@ const Review = () => {
             </div>
           </div>
         </article>
-        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4  py-[60px] px-[40px] rounded-[20px]">
+        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4 py-[60px] px-[40px] rounded-[20px]">
           <span>
             <img src={quote} alt="quote icon" />
           </span>
 
           <div className="w-full mt-[40px] flex flex-col gap-6">
-            <p className="w-full text-[18px] text-white  max-sm:text-[16px]">
+            <p className="w-full text-[18px] text-white max-sm:text-[16px]">
               It is usually people in the money business, finance, and
               international trade that are really rich.
             </p>
@@ -97,7 +128,7 @@ const Review = () => {
                 />
               </div>
               <div className="ml-[16px]">
-                <h4 className="text-[20px]  max-sm:text-[18px] text-white">
+                <h4 className="text-[20px] max-sm:text-[18px] text-white">
                   Kenn Gale
                 </h4>
                 <span className="text-[16px] text-slate-300">Founder</span>
