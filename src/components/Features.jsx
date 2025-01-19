@@ -29,7 +29,7 @@ const Features = () => {
         </div>
       </article>
       <article className="w-full flex items-center justify-between container-max  max-xl:justify-center mb-[160px]">
-        <div className="max-xl:hidden block">
+        <div className="max-xl:hidden block bg-light">
           <img
             src={feature2Img}
             width={600}
@@ -61,7 +61,7 @@ const Features = () => {
           </p>
           <StartedBtn></StartedBtn>
         </div>
-        <div className="max-xl:hidden block">
+        <div className="max-xl:hidden block bg-light">
           <img
             src={feature3Img}
             width={600}

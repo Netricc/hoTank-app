@@ -33,7 +33,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="max-xl:hidden block">
+      <div className="max-xl:hidden block bg-light">
         <img src={heroImage} alt="hero image" width={670} height={674} />
       </div>
     </section>

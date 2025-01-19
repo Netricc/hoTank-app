@@ -132,3 +132,18 @@
   transform: rotate(330deg) translate(0, -130%);
   animation-delay: -0.1s;
 }
+
+.bg-gradient {
+  background: linear-gradient(120deg, #def9fa, #33bbcf);
+}
+
+.bg-secondary-gradient {
+  background: linear-gradient(45deg, #343338, #11101d);
+}
+
+.bg-light {
+  background: url("./assets/images/light.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

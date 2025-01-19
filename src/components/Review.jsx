@@ -16,7 +16,7 @@ const Review = () => {
       </div>
 
       <div className="w-full flex items-center justify-between max-2xl:justify-center flex-wrap ">
-        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4 max-sm:mx-0  bg-slate-700 py-[60px] px-[40px] rounded-[20px]">
+        <article className="w-[370px] h-[395px] max-xl:mx-7 max-xl:my-4 max-sm:mx-0  bg-secondary-gradient py-[60px] px-[40px] rounded-[20px]">
           <span>
             <img src={quote} alt="quote icon" />
           </span>

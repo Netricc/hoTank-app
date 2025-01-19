@@ -26,7 +26,7 @@ const Footer = () => {
                 </li>
                 {footerLink.links.map((link) => (
                   <li
-                    className="text-slate-300 font-normal text-[18px] mb-[12px]"
+                    className="text-slate-300 font-normal text-[18px] mb-[12px] hover:text-slate-400 transition-colors"
                     key={link.href}
                   >
                     <a href={link.href}>{link.label}</a>
