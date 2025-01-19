@@ -3,18 +3,15 @@ import feature1Img from "./../assets/images/feature-1.png";
 import feature2Img from "./../assets/images/feature-2.png";
 import feature3Img from "./../assets/images/feature-3.png";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger"; // Ensure correct import
+import ScrollTrigger from "gsap/ScrollTrigger";
 import StartedBtn from "./StartedBtn";
 
 const Features = () => {
   useEffect(() => {
-    // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // Select all h2 elements with the class "feature-title"
     const titles = gsap.utils.toArray(".feature-title");
 
-    // Apply animation to each title
     titles.forEach((title) => {
       gsap.fromTo(
         title,
@@ -28,11 +25,11 @@ const Features = () => {
           duration: 0.7,
           ease: "power1.out",
           scrollTrigger: {
-            trigger: title, // Use the current title as the trigger
-            start: "top 80%", // Start animation when title reaches 80% of viewport
-            end: "top 50%", // Optional end for ScrollTrigger's effects
-            toggleActions: "play none none none", // Trigger only once
-            markers: false, // Set true for debugging
+            trigger: title,
+            start: "top 80%",
+            end: "top 50%",
+            toggleActions: "play none none none",
+            markers: false,
           },
         }
       );

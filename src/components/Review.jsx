@@ -3,17 +3,15 @@ import reviewImage1 from "./../assets/images/reviewImage1.png";
 import reviewImage2 from "./../assets/images/reviewImage2.png";
 import reviewImage3 from "./../assets/images/reviewImage3.png";
 import { useEffect } from "react";
-import ScrollTrigger from "gsap/ScrollTrigger"; // Ensure correct import
+import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
 const Review = () => {
   useEffect(() => {
-    // Ensure ScrollTrigger is registered
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animation for the review title
     gsap.fromTo(
-      "#review-title", // Correct ID selector
+      "#review-title",
       {
         y: "100%",
         opacity: 0,
@@ -24,10 +22,10 @@ const Review = () => {
         duration: 0.7,
         ease: "power1.out",
         scrollTrigger: {
-          trigger: "#review-title", // Correct ID
-          start: "top 80%", // When the top of the trigger hits 80% of the viewport
-          end: "top 50%", // Optional end point
-          toggleActions: "play none none none", // Play animation on enter
+          trigger: "#review-title",
+          start: "top 80%",
+          end: "top 50%",
+          toggleActions: "play none none none",
         },
       }
     );
@@ -36,7 +34,6 @@ const Review = () => {
   return (
     <section className="w-full bg-bgPrimary container-max pb-[50px]">
       <div className="w-full flex items-center mb-[80px] max-xl:flex-col max-xl:gap-6 max-xl:items-start">
-        {/* Corrected ID */}
         <h2 id="review-title" className="text-white text-[48px] font-semibold">
           What people are <br /> saying about us
         </h2>
