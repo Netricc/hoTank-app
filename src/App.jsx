@@ -9,28 +9,32 @@ import {
   Footer,
 } from "./components/";
 import { useState, useEffect } from "react";
+
 const App = () => {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    window.onload = () => {
-      setLoading(true);
-    };
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
       {loading ? (
+        <Loader />
+      ) : (
         <>
-          <Navbar></Navbar>
-          <Hero></Hero>
-          <CompnayNumbers></CompnayNumbers>
-          <Features></Features>
-          <Review></Review>
+          <Navbar />
+          <Hero />
+          <CompnayNumbers />
+          <Features />
+          <Review />
           <Contact />
           <Footer />
         </>
-      ) : (
-        <Loader></Loader>
       )}
     </>
   );
